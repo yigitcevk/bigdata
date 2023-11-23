@@ -4,9 +4,9 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.master("local[1]").appName("NBAAAAA").getOrCreate()
 print(spark)
-df1 = spark.read.csv("/Users/onurdeniz/Desktop/archive/Players.csv")
-df2 = spark.read.csv("/Users/onurdeniz/Desktop/archive/Seasons_Stats.csv")
-df3 = spark.read.csv("/Users/onurdeniz/Desktop/archive/player_data.csv")
+df1 = spark.read.csv("archive/Players.csv")
+df2 = spark.read.csv("archive/Seasons_Stats.csv")
+df3 = spark.read.csv("archive/player_data.csv")
 
 df1.show()
 df2.show()
